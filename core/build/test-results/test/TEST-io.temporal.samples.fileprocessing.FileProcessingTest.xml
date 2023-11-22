@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.fileprocessing.FileProcessingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:18" hostname="himanshukapoor" time="9.349">
+  <properties/>
+  <testcase name="testHappyPath" classname="io.temporal.samples.fileprocessing.FileProcessingTest" time="1.268"/>
+  <testcase name="testHostFailover" classname="io.temporal.samples.fileprocessing.FileProcessingTest" time="8.08"/>
+  <system-out><![CDATA[11:04:18.378 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=98, target=directaddress:///ab636d3b-0408-4fa9-b280-51565b609228}} 
+11:04:18.379 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=98, target=directaddress:///ab636d3b-0408-4fa9-b280-51565b609228}} 
+11:04:18.379 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=98, target=directaddress:///ab636d3b-0408-4fa9-b280-51565b609228}} 
+11:04:18.405 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:18.406 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:18.406 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:18.407 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.375 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:19.378 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.378 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.378 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.378 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:19.379 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.379 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:19.379 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:19.380 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.380 { } [Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:19.380 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.380 { } [Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:19.381 { } [Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.381 { } [Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:19.383 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.383 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.384 { } [Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.384 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.385 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.385 { } [Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.385 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.385 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.386 { } [Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.386 { } [Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.387 { } [Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:19.388 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.389 { } [Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:19.390 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.391 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:19.391 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.391 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testHappyPath-0a7566f4-1fb5-420b-bf82-af965d14af76", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.391 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.392 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:19.634 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:19.635 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:19.635 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:19.636 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+11:04:19.650 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=103, target=directaddress:///4301de80-81d5-476d-8667-fe26bf33d938}} 
+11:04:19.651 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=103, target=directaddress:///4301de80-81d5-476d-8667-fe26bf33d938}} 
+11:04:19.652 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=103, target=directaddress:///4301de80-81d5-476d-8667-fe26bf33d938}} 
+11:04:19.662 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.662 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.663 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:19.663 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.714 { } [Time-limited test] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:27.714 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.715 { } [Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:27.715 { } [Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:27.715 { } [Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:27.715 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.715 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:27.715 { } [Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:27.715 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.715 { } [Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:27.715 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:27.715 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:27.715 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.715 { } [Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.716 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.716 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.716 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Activity Poller taskQueue="host1", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.715 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.716 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.716 { } [Activity Poller taskQueue="host2", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:27.716 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:27.716 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testHostFailover-f965c0d4-084b-48da-a206-fa975d91a798", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.716 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host1", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.717 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="host2", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:27.717 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 4] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f395f30c-cbb9-3b89-b885-23d3f60253bb, activityType=Process, attempt=4 
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.fileprocessing.FileProcessingTest.lambda$testHostFailover$0(FileProcessingTest.java:120)
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42)
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103)
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:82)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:56)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:161)
+	at io.temporal.samples.fileprocessing.StoreActivities$MockitoMock$5w8MpIpb.process(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.717 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f395f30c-cbb9-3b89-b885-23d3f60253bb, activityType=Process, attempt=1 
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.fileprocessing.FileProcessingTest.lambda$testHostFailover$0(FileProcessingTest.java:120)
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42)
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103)
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:82)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:56)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:161)
+	at io.temporal.samples.fileprocessing.StoreActivities$MockitoMock$5w8MpIpb.process(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.717 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 2] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f395f30c-cbb9-3b89-b885-23d3f60253bb, activityType=Process, attempt=2 
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.fileprocessing.FileProcessingTest.lambda$testHostFailover$0(FileProcessingTest.java:120)
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42)
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103)
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:82)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:56)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:161)
+	at io.temporal.samples.fileprocessing.StoreActivities$MockitoMock$5w8MpIpb.process(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.717 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 3] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f395f30c-cbb9-3b89-b885-23d3f60253bb, activityType=Process, attempt=3 
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.fileprocessing.FileProcessingTest.lambda$testHostFailover$0(FileProcessingTest.java:120)
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42)
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103)
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:82)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:56)
+	at org.mockito.internal.creation.bytebuddy.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:161)
+	at io.temporal.samples.fileprocessing.StoreActivities$MockitoMock$5w8MpIpb.process(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.718 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 1] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = f395f30c-cbb9-3b89-b885-23d3f60253bb, ActivityType = Process, WorkflowId=32ffd8cd-cf41-489b-9652-4440bebe828b, WorkflowType=FileProcessingWorkflow, RunId=eb45b45a-7870-4a7e-9a85-ce97659c209d 
+io.grpc.StatusRuntimeException: NOT_FOUND: Completed workflow
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:271)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:252)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:165)
+	at io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceBlockingStub.respondActivityTaskFailed(WorkflowServiceGrpc.java:4026)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.lambda$sendReply$1(ActivityWorker.java:359)
+	at io.temporal.internal.retryer.GrpcRetryer.lambda$retry$0(GrpcRetryer.java:52)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:69)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:354)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.718 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 4] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = f395f30c-cbb9-3b89-b885-23d3f60253bb, ActivityType = Process, WorkflowId=32ffd8cd-cf41-489b-9652-4440bebe828b, WorkflowType=FileProcessingWorkflow, RunId=eb45b45a-7870-4a7e-9a85-ce97659c209d 
+io.grpc.StatusRuntimeException: NOT_FOUND: Completed workflow
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:271)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:252)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:165)
+	at io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceBlockingStub.respondActivityTaskFailed(WorkflowServiceGrpc.java:4026)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.lambda$sendReply$1(ActivityWorker.java:359)
+	at io.temporal.internal.retryer.GrpcRetryer.lambda$retry$0(GrpcRetryer.java:52)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:69)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:354)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.718 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 2] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = f395f30c-cbb9-3b89-b885-23d3f60253bb, ActivityType = Process, WorkflowId=32ffd8cd-cf41-489b-9652-4440bebe828b, WorkflowType=FileProcessingWorkflow, RunId=eb45b45a-7870-4a7e-9a85-ce97659c209d 
+io.grpc.StatusRuntimeException: NOT_FOUND: Completed workflow
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:271)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:252)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:165)
+	at io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceBlockingStub.respondActivityTaskFailed(WorkflowServiceGrpc.java:4026)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.lambda$sendReply$1(ActivityWorker.java:359)
+	at io.temporal.internal.retryer.GrpcRetryer.lambda$retry$0(GrpcRetryer.java:52)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:69)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:354)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.718 {32ffd8cd-cf41-489b-9652-4440bebe828b f395f30c-cbb9-3b89-b885-23d3f60253bb} [Activity Executor taskQueue="host1", namespace="UnitTest": 3] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = f395f30c-cbb9-3b89-b885-23d3f60253bb, ActivityType = Process, WorkflowId=32ffd8cd-cf41-489b-9652-4440bebe828b, WorkflowType=FileProcessingWorkflow, RunId=eb45b45a-7870-4a7e-9a85-ce97659c209d 
+io.grpc.StatusRuntimeException: NOT_FOUND: Completed workflow
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:271)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:252)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:165)
+	at io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceBlockingStub.respondActivityTaskFailed(WorkflowServiceGrpc.java:4026)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.lambda$sendReply$1(ActivityWorker.java:359)
+	at io.temporal.internal.retryer.GrpcRetryer.lambda$retry$0(GrpcRetryer.java:52)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:69)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:354)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:27.718 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:27.718 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:27.718 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:27.719 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

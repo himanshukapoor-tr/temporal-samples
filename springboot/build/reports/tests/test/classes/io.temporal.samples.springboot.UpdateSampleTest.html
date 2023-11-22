@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UpdateSampleTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UpdateSampleTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.temporal.samples.springboot.html">io.temporal.samples.springboot</a> &gt; UpdateSampleTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.090s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testUpdate()</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateRejected()</td>
+<td class="success">0.065s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-11-17 11:06:03.239  INFO 80454 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.temporal.samples.springboot.UpdateSampleTest], using SpringBootContextLoader
+2023-11-17 11:06:03.239  INFO 80454 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.temporal.samples.springboot.UpdateSampleTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-11-17 11:06:03.241  INFO 80454 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-11-17 11:06:03.241  INFO 80454 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5aca000e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e3b7b0b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@143211f1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33650678, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3925aa6a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c336d66, org.springframework.test.context.transaction.TransactionalTestExecutionListener@480a5088, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53c7c937, org.springframework.test.context.event.EventPublishingTestExecutionListener@47a55fdf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@10aa4210, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a3ece9d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@675d209c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@aebd00f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4893b980, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34a5dc29]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.12)
+
+2023-11-17 11:06:03.261  INFO 80454 --- [    Test worker] i.t.samples.springboot.UpdateSampleTest  : Starting UpdateSampleTest using Java 17.0.4 on himanshukapoor with PID 80454 (started by himanshukapoor in /Users/himanshukapoor/projects/temporal/samples-java/springboot)
+2023-11-17 11:06:03.261  INFO 80454 --- [    Test worker] i.t.samples.springboot.UpdateSampleTest  : The following 1 profile is active: &quot;test&quot;
+2023-11-17 11:06:03.347  INFO 80454 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-17 11:06:03.351  INFO 80454 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+2023-11-17 11:06:03.390  INFO 80454 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-17 11:06:03.392  INFO 80454 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-11-17 11:06:03.392  INFO 80454 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-11-17 11:06:03.392  INFO 80454 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-11-17 11:06:03.401  INFO 80454 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-17 11:06:03.401  INFO 80454 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-17 11:06:03.423  INFO 80454 --- [    Test worker] i.t.s.b.a.TestServerAutoConfiguration    : `TemporalOptionsCustomizer&lt;WorkflowServiceStubsOptions.Builder&gt;` bean is ignored for test environment
+2023-11-17 11:06:03.424  INFO 80454 --- [    Test worker] i.t.s.WorkflowServiceStubsImpl           : Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=17, target=directaddress:///49abb237-e25c-427d-92a9-130634bce512}}
+2023-11-17 11:06:03.424  INFO 80454 --- [    Test worker] i.t.serviceclient.TestServiceStubsImpl   : Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=17, target=directaddress:///49abb237-e25c-427d-92a9-130634bce512}}
+2023-11-17 11:06:03.424  INFO 80454 --- [    Test worker] i.t.s.OperatorServiceStubsImpl           : Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=17, target=directaddress:///49abb237-e25c-427d-92a9-130634bce512}}
+2023-11-17 11:06:03.468  WARN 80454 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-17 11:06:03.500  INFO 80454 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-11-17 11:06:03.540  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Creating a worker with default settings for a task queue 'UpdateSampleTaskQueue' caused by an auto-discovered workflow class class io.temporal.samples.springboot.update.PurchaseWorkflowImpl
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered workflow class class io.temporal.samples.springboot.update.PurchaseWorkflowImpl on a worker with a task queue 'UpdateSampleTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Creating a worker with default settings for a task queue 'KafkaSampleTaskQueue' caused by an auto-discovered workflow class class io.temporal.samples.springboot.kafka.MessageWorkflowImpl
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered workflow class class io.temporal.samples.springboot.kafka.MessageWorkflowImpl on a worker with a task queue 'KafkaSampleTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Creating a worker with default settings for a task queue 'HelloSampleTaskQueue' caused by an auto-discovered workflow class class io.temporal.samples.springboot.hello.HelloWorkflowImpl
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered workflow class class io.temporal.samples.springboot.hello.HelloWorkflowImpl on a worker with a task queue 'HelloSampleTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Creating a worker with default settings for a task queue 'CustomizeTaskQueue' caused by an auto-discovered workflow class class io.temporal.samples.springboot.customize.CustomizeWorkflowImpl
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered workflow class class io.temporal.samples.springboot.customize.CustomizeWorkflowImpl on a worker with a task queue 'CustomizeTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered activity bean 'customizeActivityImpl' of class class io.temporal.samples.springboot.customize.CustomizeActivityImpl on a worker with a task queue 'CustomizeTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered activity bean 'helloActivityImpl' of class class io.temporal.samples.springboot.hello.HelloActivityImpl on a worker with a task queue 'HelloSampleTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered activity bean 'kafkaActivityImpl' of class class io.temporal.samples.springboot.kafka.KafkaActivityImpl on a worker with a task queue 'KafkaSampleTaskQueue'
+2023-11-17 11:06:03.541  INFO 80454 --- [    Test worker] i.t.s.b.a.template.WorkersTemplate       : Registering auto-discovered activity bean 'purchaseActivitiesImpl' of class class io.temporal.samples.springboot.update.PurchaseActivitiesImpl on a worker with a task queue 'UpdateSampleTaskQueue'
+2023-11-17 11:06:03.595  INFO 80454 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-17 11:06:03.611  INFO 80454 --- [    Test worker] i.t.samples.springboot.UpdateSampleTest  : Started UpdateSampleTest in 0.37 seconds (JVM running for 16.592)
+2023-11-17 11:06:03.613  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Workflow Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.613  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Activity Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.614  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Workflow Poller taskQueue=&quot;CustomizeTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.615  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Workflow Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.615  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Activity Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.616  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Workflow Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.617  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : start: Poller{name=Activity Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.673  WARN 80454 --- [te makePurchase] i.t.i.sync.WorkflowExecutionHandler      : Workflow execution failure WorkflowId='NewPurchase', RunId=4797493e-d821-44a1-bf48-80c4bab4f226, WorkflowType='PurchaseWorkflow'
+
+io.temporal.failure.ApplicationFailure: message='Product 1 is not in stock for amount 40', type='io.temporal.samples.springboot.update.ProductNotAvailableForAmountException', nonRetryable=false
+	at io.temporal.failure.ApplicationFailure.newFailureWithCause(ApplicationFailure.java:93) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.failure.ApplicationFailure.newFailure(ApplicationFailure.java:73) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.samples.springboot.update.PurchaseWorkflowImpl.makePurchase(PurchaseWorkflowImpl.java:49) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at io.temporal.internal.sync.WorkflowInternal.lambda$registerListener$dfcf0387$2(WorkflowInternal.java:248) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.UpdateDispatcher.handleInterceptedExecuteUpdate(UpdateDispatcher.java:145) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.SyncWorkflowContext.handleInterceptedExecuteUpdate(SyncWorkflowContext.java:340) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.BaseRootWorkflowInboundCallsInterceptor.executeUpdate(BaseRootWorkflowInboundCallsInterceptor.java:67) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.UpdateDispatcher.handleExecuteUpdate(UpdateDispatcher.java:96) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.SyncWorkflowContext.handleExecuteUpdate(SyncWorkflowContext.java:331) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.WorkflowExecutionHandler.handleExecuteUpdate(WorkflowExecutionHandler.java:125) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.SyncWorkflow.lambda$handleUpdate$3(SyncWorkflow.java:179) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107) ~[temporal-sdk-1.22.0.jar:na]
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53) ~[temporal-sdk-1.22.0.jar:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-11-17 11:06:03.710  INFO 80454 --- [    Test worker] io.temporal.worker.WorkerFactory         : shutdown: WorkerFactory{identity=80454@himanshukapoor}
+2023-11-17 11:06:03.710  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.710  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.710  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.710  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;CustomizeTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.710  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.710  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.710  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.711  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.711  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [    Test worker] i.t.s.WorkflowServiceStubsImpl           : shutdown
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.711  INFO 80454 --- [    Test worker] i.t.serviceclient.TestServiceStubsImpl   : shutdownNow
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: WorkflowPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] i.t.s.OperatorServiceStubsImpl           : shutdownNow
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] io.temporal.worker.WorkerFactory         : shutdownNow: WorkerFactory{identity=80454@himanshukapoor}
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 4] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 3] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 1] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 5] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;CustomizeTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.712  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;UpdateSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.712  INFO 80454 --- [    Test worker] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Workflow Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.713  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;HelloSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.713  INFO 80454 --- [ce=&quot;default&quot;: 2] io.temporal.internal.worker.Poller       : poll loop is terminated: ActivityPollTask
+2023-11-17 11:06:03.713  INFO 80454 --- [    Test worker] io.temporal.worker.WorkerFactory         : awaitTermination begin: WorkerFactory{identity=80454@himanshukapoor}
+2023-11-17 11:06:03.713  INFO 80454 --- [tdownManager: 1] io.temporal.internal.worker.Poller       : shutdown: Poller{name=Activity Poller taskQueue=&quot;KafkaSampleTaskQueue&quot;, namespace=&quot;default&quot;, identity=80454@himanshukapoor}
+2023-11-17 11:06:03.713  INFO 80454 --- [    Test worker] io.temporal.worker.WorkerFactory         : awaitTermination done: WorkerFactory{identity=80454@himanshukapoor}
+2023-11-17 11:06:03.713  INFO 80454 --- [    Test worker] i.t.s.WorkflowServiceStubsImpl           : shutdownNow
+2023-11-17 11:06:03.713  INFO 80454 --- [    Test worker] io.temporal.testserver.TestServer        : Shutting down in-process gRPC server
+2023-11-17 11:06:03.713  INFO 80454 --- [    Test worker] io.temporal.testserver.TestServer        : Shutting down gRPC Services
+2023-11-17 11:06:03.714  INFO 80454 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-17 11:06:03.714  INFO 80454 --- [    Test worker] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-11-17 11:06:03.714  INFO 80454 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-11-17 11:06:03.715  INFO 80454 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at 17 Nov 2023, 11:06:03</p>
+</div>
+</div>
+</body>
+</html>

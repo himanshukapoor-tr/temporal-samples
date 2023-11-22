@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.hello.HelloDynamicActivityJUnit5Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:08" hostname="himanshukapoor" time="0.007">
+  <properties/>
+  <testcase name="testDynamicActivity(MyStaticActivity)" classname="io.temporal.samples.hello.HelloDynamicActivityJUnit5Test" time="0.007"/>
+  <system-out><![CDATA[11:04:08.580 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=35, target=directaddress:///046aa1f2-95dd-4d57-b249-97f864b2a089}} 
+11:04:08.585 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdown 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

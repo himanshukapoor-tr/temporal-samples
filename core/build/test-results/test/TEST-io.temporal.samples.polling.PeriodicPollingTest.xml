@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.polling.PeriodicPollingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:05:06" hostname="himanshukapoor" time="0.534">
+  <properties/>
+  <testcase name="testInfrequentPoll" classname="io.temporal.samples.polling.PeriodicPollingTest" time="0.534"/>
+  <system-out><![CDATA[11:05:06.781 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=336, target=directaddress:///f623012d-24a1-4cd5-9625-8c3c62dd8c6d}} 
+11:05:06.781 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=336, target=directaddress:///f623012d-24a1-4cd5-9625-8c3c62dd8c6d}} 
+11:05:06.781 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=336, target=directaddress:///f623012d-24a1-4cd5-9625-8c3c62dd8c6d}} 
+11:05:06.783 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:05:06.784 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:05:06.790 {ChildWorkflowPoll 1496a795-daf7-34e5-9cc3-f1d87c3d272f} [Activity Executor taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=1496a795-daf7-34e5-9cc3-f1d87c3d272f, activityType=DoPoll, attempt=1 
+io.temporal.samples.polling.TestService$TestServiceException: Service is down
+	at io.temporal.samples.polling.TestService.getServiceResult(TestService.java:41)
+	at io.temporal.samples.polling.periodicsequence.PeriodicPollingActivityImpl.doPoll(PeriodicPollingActivityImpl.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:06.793 {ChildWorkflowPoll 7411770c-5d87-3a75-8e9f-ced7139b8bad} [Activity Executor taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=7411770c-5d87-3a75-8e9f-ced7139b8bad, activityType=DoPoll, attempt=1 
+io.temporal.samples.polling.TestService$TestServiceException: Service is down
+	at io.temporal.samples.polling.TestService.getServiceResult(TestService.java:41)
+	at io.temporal.samples.polling.periodicsequence.PeriodicPollingActivityImpl.doPoll(PeriodicPollingActivityImpl.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:06.795 {ChildWorkflowPoll eaf31bb8-dfb4-3009-9419-8fa676c038f7} [Activity Executor taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=eaf31bb8-dfb4-3009-9419-8fa676c038f7, activityType=DoPoll, attempt=1 
+io.temporal.samples.polling.TestService$TestServiceException: Service is down
+	at io.temporal.samples.polling.TestService.getServiceResult(TestService.java:41)
+	at io.temporal.samples.polling.periodicsequence.PeriodicPollingActivityImpl.doPoll(PeriodicPollingActivityImpl.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:06.797 {ChildWorkflowPoll 58a58107-8c53-3f4d-b5e2-a873774cd734} [Activity Executor taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=58a58107-8c53-3f4d-b5e2-a873774cd734, activityType=DoPoll, attempt=1 
+io.temporal.samples.polling.TestService$TestServiceException: Service is down
+	at io.temporal.samples.polling.TestService.getServiceResult(TestService.java:41)
+	at io.temporal.samples.polling.periodicsequence.PeriodicPollingActivityImpl.doPoll(PeriodicPollingActivityImpl.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:06.801 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:05:06.801 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:05:06.801 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:06.801 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:05:06.801 { } [Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:06.801 { } [Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:06.801 { } [Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:06.801 { } [Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:06.801 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:05:06.801 { } [Workflow Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:06.801 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:06.801 { } [Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:06.801 { } [Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:06.801 { } [Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:06.801 { } [Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:06.801 { } [Activity Poller taskQueue="WorkflowTest-testInfrequentPoll-307df737-e323-4496-ae70-c5aed0e7b514", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:07.307 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:07.307 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:05:07.307 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:05:07.308 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

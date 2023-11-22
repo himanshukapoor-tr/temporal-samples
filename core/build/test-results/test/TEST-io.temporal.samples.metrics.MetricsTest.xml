@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.metrics.MetricsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:58" hostname="himanshukapoor" time="0.632">
+  <properties/>
+  <testcase name="testCountActivityRetriesMetric" classname="io.temporal.samples.metrics.MetricsTest" time="0.632"/>
+  <system-out><![CDATA[11:04:58.249 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=296, target=directaddress:///db0ef196-ed65-41da-bee7-e863287db710}} 
+11:04:58.249 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=296, target=directaddress:///db0ef196-ed65-41da-bee7-e863287db710}} 
+11:04:58.249 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=296, target=directaddress:///db0ef196-ed65-41da-bee7-e863287db710}} 
+11:04:58.265 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:58.265 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:58.266 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=296, target=directaddress:///db0ef196-ed65-41da-bee7-e863287db710}} 
+11:04:58.275 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 5277ac91-a323-3a8a-b8c7-95ecab8488ec} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=5277ac91-a323-3a8a-b8c7-95ecab8488ec, activityType=PerformA, attempt=1 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performA(MetricsActivitiesImpl.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.276 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 5277ac91-a323-3a8a-b8c7-95ecab8488ec} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=5277ac91-a323-3a8a-b8c7-95ecab8488ec, activityType=PerformA, attempt=2 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performA(MetricsActivitiesImpl.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.280 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 f415894d-a9b2-33e6-acc7-eefc4b4ea739} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f415894d-a9b2-33e6-acc7-eefc4b4ea739, activityType=PerformB, attempt=1 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performB(MetricsActivitiesImpl.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.281 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 f415894d-a9b2-33e6-acc7-eefc4b4ea739} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 2] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f415894d-a9b2-33e6-acc7-eefc4b4ea739, activityType=PerformB, attempt=2 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performB(MetricsActivitiesImpl.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.282 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 f415894d-a9b2-33e6-acc7-eefc4b4ea739} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f415894d-a9b2-33e6-acc7-eefc4b4ea739, activityType=PerformB, attempt=3 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performB(MetricsActivitiesImpl.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.283 {a0e7d58e-1bcd-4379-b88a-0861de69efe1 f415894d-a9b2-33e6-acc7-eefc4b4ea739} [Activity Executor taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=f415894d-a9b2-33e6-acc7-eefc4b4ea739, activityType=PerformB, attempt=4 
+java.lang.NullPointerException: simulated
+	at io.temporal.samples.metrics.activities.MetricsActivitiesImpl.performB(MetricsActivitiesImpl.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.341 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:58.341 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:58.341 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:58.341 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:58.341 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:58.341 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:58.341 { } [Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.341 { } [Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.341 { } [Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.341 { } [Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.341 { } [Workflow Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.341 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:58.341 { } [Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:58.341 { } [Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:58.341 { } [Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:58.341 { } [Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:58.341 { } [Activity Poller taskQueue="WorkflowTest-testCountActivityRetriesMetric-d9510e22-64ad-4ff3-9619-a903a4f93791", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:58.853 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:58.854 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:58.854 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:58.855 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

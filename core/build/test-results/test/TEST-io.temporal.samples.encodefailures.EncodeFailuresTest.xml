@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.encodefailures.EncodeFailuresTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:18" hostname="himanshukapoor" time="0.288">
+  <properties/>
+  <testcase name="testFailureMessageIsEncoded" classname="io.temporal.samples.encodefailures.EncodeFailuresTest" time="0.288"/>
+  <system-out><![CDATA[11:04:18.087 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=93, target=directaddress:///8d5505e6-1f2a-46d9-bb00-5a7dca3d3983}} 
+11:04:18.087 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=93, target=directaddress:///8d5505e6-1f2a-46d9-bb00-5a7dca3d3983}} 
+11:04:18.087 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=93, target=directaddress:///8d5505e6-1f2a-46d9-bb00-5a7dca3d3983}} 
+11:04:18.090 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:18.101 {CustomerAgeCheck } [workflow-method-CustomerAgeCheck-49087347-d89b-467a-84fa-05060259d94c] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='CustomerAgeCheck', RunId=49087347-d89b-467a-84fa-05060259d94c, WorkflowType='CustomerAgeCheck' 
+io.temporal.samples.encodefailures.InvalidCustomerException: customer John is under age.
+	at io.temporal.samples.encodefailures.CustomerAgeCheckImpl.validateCustomer(CustomerAgeCheckImpl.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:18.109 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:18.109 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:18.109 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:18.109 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:18.110 { } [Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:18.110 { } [Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:18.110 { } [Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:18.110 { } [Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:18.110 { } [Workflow Poller taskQueue="WorkflowTest-testFailureMessageIsEncoded-d721094b-7024-4bb4-a3ea-0d2ad7ad6da3", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:18.110 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:18.366 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:18.367 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:18.367 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:18.368 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

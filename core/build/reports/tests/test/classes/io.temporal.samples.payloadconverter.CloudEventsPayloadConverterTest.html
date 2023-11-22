@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CloudEventsPayloadConverterTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CloudEventsPayloadConverterTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.temporal.samples.payloadconverter.html">io.temporal.samples.payloadconverter</a> &gt; CloudEventsPayloadConverterTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.272s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testActivityImpl</td>
+<td class="success">0.272s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:04:58.943 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=311, target=directaddress:///a2521ee0-377a-4c0d-85e4-7c3bf5a3304b}} 
+11:04:58.943 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=311, target=directaddress:///a2521ee0-377a-4c0d-85e4-7c3bf5a3304b}} 
+11:04:58.943 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=311, target=directaddress:///a2521ee0-377a-4c0d-85e4-7c3bf5a3304b}} 
+11:04:58.943 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:58.952 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:58.952 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:58.952 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:58.952 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:58.952 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.952 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.952 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.952 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.952 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-49528d2c-fb06-45c1-9b99-369518e85923&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:58.952 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:59.206 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:59.206 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:59.206 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:59.207 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at 17 Nov 2023, 11:05:09</p>
+</div>
+</div>
+</body>
+</html>

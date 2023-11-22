@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.hello.HelloCancellationScopeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:30" hostname="himanshukapoor" time="17.39">
+  <properties/>
+  <testcase name="testActivityImpl" classname="io.temporal.samples.hello.HelloCancellationScopeTest" time="17.39"/>
+  <system-out><![CDATA[11:04:30.116 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=186, target=directaddress:///9c178ed5-cdb8-4cee-8aee-d8ab440b8a4e}} 
+11:04:30.116 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=186, target=directaddress:///9c178ed5-cdb8-4cee-8aee-d8ab440b8a4e}} 
+11:04:30.116 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=186, target=directaddress:///9c178ed5-cdb8-4cee-8aee-d8ab440b8a4e}} 
+11:04:30.117 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:30.118 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest", identity=78715@himanshukapoor} 
+Activity for Hello going to take 29 seconds
+Activity for Hola going to take 6 seconds
+Activity for Bye going to take 20 seconds
+Activity for Oi going to take 19 seconds
+Activity for Hallo going to take 10 seconds
+Activity for ???????????? going to take 12 seconds
+Activity for Hola completed
+Activity for Bye was cancelled. Cleanup is expected to take 2 seconds.
+Activity for Oi was cancelled. Cleanup is expected to take 3 seconds.
+Activity for Hallo was cancelled. Cleanup is expected to take 1 seconds.
+Activity for ???????????? was cancelled. Cleanup is expected to take 0 seconds.
+Activity for Hello was cancelled. Cleanup is expected to take 4 seconds.
+Activity for ???????????? finished cancellation
+11:04:39.167 {31da6912-f5ff-4e18-b01e-1d9a6d78a1bd 805bffa1-3d44-3bff-88ac-1912dd90245c} [Activity Executor taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 5] INFO  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity canceled. ActivityId=805bffa1-3d44-3bff-88ac-1912dd90245c, activityType=ComposeGreeting, attempt=1 
+Activity for Hallo finished cancellation
+11:04:40.163 {31da6912-f5ff-4e18-b01e-1d9a6d78a1bd f48610a1-d714-3a1f-9a32-a6e5c437d921} [Activity Executor taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 6] INFO  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity canceled. ActivityId=f48610a1-d714-3a1f-9a32-a6e5c437d921, activityType=ComposeGreeting, attempt=1 
+Activity for Bye finished cancellation
+11:04:41.158 {31da6912-f5ff-4e18-b01e-1d9a6d78a1bd 94f64f09-8c04-3f22-8d3f-8c20f033db91} [Activity Executor taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 3] INFO  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity canceled. ActivityId=94f64f09-8c04-3f22-8d3f-8c20f033db91, activityType=ComposeGreeting, attempt=1 
+Activity for Oi finished cancellation
+11:04:42.161 {31da6912-f5ff-4e18-b01e-1d9a6d78a1bd 6fa8ba4d-0844-3fb7-8c02-49dcba5749eb} [Activity Executor taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 4] INFO  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity canceled. ActivityId=6fa8ba4d-0844-3fb7-8c02-49dcba5749eb, activityType=ComposeGreeting, attempt=1 
+Activity for Hello finished cancellation
+11:04:43.169 {31da6912-f5ff-4e18-b01e-1d9a6d78a1bd ae179ab7-905b-3126-b6b8-263b6b2f3e4e} [Activity Executor taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 1] INFO  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity canceled. ActivityId=ae179ab7-905b-3126-b6b8-263b6b2f3e4e, activityType=ComposeGreeting, attempt=1 
+11:04:43.177 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:43.177 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:43.177 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:43.177 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:43.177 { } [Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:43.177 { } [Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:43.177 { } [Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:43.177 { } [Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:43.177 { } [Workflow Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:43.178 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:47.246 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:47.248 { } [Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:47.248 { } [Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:47.248 { } [Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:47.248 { } [Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:47.249 { } [Activity Poller taskQueue="WorkflowTest-testActivityImpl-2cfc8e19-eeef-4d66-b239-54986e9b3449", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:47.502 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:47.502 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:47.502 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:47.503 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

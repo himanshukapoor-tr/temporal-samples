@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PerActivityOptionsTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PerActivityOptionsTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.temporal.samples.peractivityoptions.html">io.temporal.samples.peractivityoptions</a> &gt; PerActivityOptionsTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.539s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testPerActivityTypeWorkflow</td>
+<td class="success">0.539s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:05:00.374 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=321, target=directaddress:///72ee3dd8-7ca3-4ede-8fd1-53a2a84d4912}} 
+11:05:00.374 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=321, target=directaddress:///72ee3dd8-7ca3-4ede-8fd1-53a2a84d4912}} 
+11:05:00.374 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=321, target=directaddress:///72ee3dd8-7ca3-4ede-8fd1-53a2a84d4912}} 
+11:05:00.376 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:05:00.377 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:05:00.384 {4aaa8c9e-b155-4193-b384-18000bb0e294 75d00ede-fdcb-3a81-9056-3fb0a865ff5a} [Activity Executor taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=75d00ede-fdcb-3a81-9056-3fb0a865ff5a, activityType=ActivityTypeA, attempt=1 
+java.lang.NullPointerException: Activity type: ActivityTypeA attempt times: 1
+	at io.temporal.samples.peractivityoptions.FailingActivitiesImpl.activityTypeA(FailingActivitiesImpl.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:00.386 {4aaa8c9e-b155-4193-b384-18000bb0e294 75d00ede-fdcb-3a81-9056-3fb0a865ff5a} [Activity Executor taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=75d00ede-fdcb-3a81-9056-3fb0a865ff5a, activityType=ActivityTypeA, attempt=2 
+java.lang.NullPointerException: Activity type: ActivityTypeA attempt times: 2
+	at io.temporal.samples.peractivityoptions.FailingActivitiesImpl.activityTypeA(FailingActivitiesImpl.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:00.386 {4aaa8c9e-b155-4193-b384-18000bb0e294 75d00ede-fdcb-3a81-9056-3fb0a865ff5a} [Activity Executor taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=75d00ede-fdcb-3a81-9056-3fb0a865ff5a, activityType=ActivityTypeA, attempt=3 
+java.lang.NullPointerException: Activity type: ActivityTypeA attempt times: 3
+	at io.temporal.samples.peractivityoptions.FailingActivitiesImpl.activityTypeA(FailingActivitiesImpl.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:00.388 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - ActivityFailure cause: io.temporal.failure.ApplicationFailure 
+11:05:00.388 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - ApplicationFailure type: java.lang.NullPointerException 
+11:05:00.388 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - Application Failure orig message: Activity type: ActivityTypeA attempt times: 3 
+11:05:00.389 {4aaa8c9e-b155-4193-b384-18000bb0e294 dbcf666b-b3fc-3f23-a182-bfdb7c5dcc2c} [Activity Executor taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=dbcf666b-b3fc-3f23-a182-bfdb7c5dcc2c, activityType=ActivityTypeB, attempt=1 
+java.lang.NullPointerException: Activity type: ActivityTypeB attempt times: 1
+	at io.temporal.samples.peractivityoptions.FailingActivitiesImpl.activityTypeB(FailingActivitiesImpl.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:05:00.390 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - ActivityFailure cause: io.temporal.failure.ApplicationFailure 
+11:05:00.390 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - ApplicationFailure type: java.lang.NullPointerException 
+11:05:00.390 {4aaa8c9e-b155-4193-b384-18000bb0e294 } [workflow-method-4aaa8c9e-b155-4193-b384-18000bb0e294-c40123aa-a4e8-4666-a45f-84032aece522] INFO  i.t.s.p.PerActivityOptionsWorkflowImpl - Application Failure orig message: Activity type: ActivityTypeB attempt times: 1 
+11:05:00.391 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:05:00.391 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:05:00.391 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:00.391 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:05:00.391 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:00.391 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:00.391 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:00.391 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:00.391 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:05:00.391 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:05:00.391 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:00.391 { } [Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:00.391 { } [Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:00.391 { } [Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:00.391 { } [Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:00.391 { } [Activity Poller taskQueue=&quot;WorkflowTest-testPerActivityTypeWorkflow-4a90a517-3366-438f-9644-2b1a1eba6e20&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:05:00.905 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:05:00.906 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:05:00.906 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:05:00.906 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at 17 Nov 2023, 11:05:09</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.asyncchild.AsyncChildTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:08" hostname="himanshukapoor" time="0.303">
+  <properties/>
+  <testcase name="testAsyncChildWorkflow" classname="io.temporal.samples.asyncchild.AsyncChildTest" time="0.303"/>
+  <system-out><![CDATA[11:04:08.597 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=38, target=directaddress:///c48708fa-b981-4adf-8334-15889132e7cf}} 
+11:04:08.597 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=38, target=directaddress:///c48708fa-b981-4adf-8334-15889132e7cf}} 
+11:04:08.597 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=38, target=directaddress:///c48708fa-b981-4adf-8334-15889132e7cf}} 
+11:04:08.599 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:08.639 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:08.639 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:08.639 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:08.640 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:08.640 { } [Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:08.640 { } [Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:08.640 { } [Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:08.640 { } [Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:08.640 { } [Workflow Poller taskQueue="WorkflowTest-testAsyncChildWorkflow-daf0378a-864d-4f8e-8cda-f1f3ebacbc47", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:08.640 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:08.895 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:08.895 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:08.895 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:08.896 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

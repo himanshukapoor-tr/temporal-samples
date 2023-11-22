@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ListWorkflowsTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ListWorkflowsTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.temporal.samples.listworkflows.html">io.temporal.samples.listworkflows</a> &gt; ListWorkflowsTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.534s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testActivityImpl</td>
+<td class="success">0.534s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:04:57.696 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=291, target=directaddress:///df47bcff-ff17-4c31-bac7-2065e7933719}} 
+11:04:57.696 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=291, target=directaddress:///df47bcff-ff17-4c31-bac7-2065e7933719}} 
+11:04:57.696 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=291, target=directaddress:///df47bcff-ff17-4c31-bac7-2065e7933719}} 
+11:04:57.698 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:57.699 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:57.711 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:57.711 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:57.711 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:57.711 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:57.712 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:57.712 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:57.712 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:57.712 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:57.712 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:57.712 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:57.712 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:57.712 { } [Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:57.712 { } [Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:57.712 { } [Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:57.712 { } [Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:57.712 { } [Activity Poller taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:57.970 {c2 43ae20d9-a43d-356c-8e5a-022f92b94b7a} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 4] ERROR i.t.s.l.CustomerActivitiesImpl - Exception in thread sleep:  
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.sleepSeconds(CustomerActivitiesImpl.java:50)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.getCustomerAccount(CustomerActivitiesImpl.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.969 {c4 a3347c0a-c2a2-3911-ab5e-ad4a2100b34c} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 5] ERROR i.t.s.l.CustomerActivitiesImpl - Exception in thread sleep:  
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.sleepSeconds(CustomerActivitiesImpl.java:50)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.getCustomerAccount(CustomerActivitiesImpl.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.969 {c3 fd45374d-cb98-3228-b912-c4602747f856} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 3] ERROR i.t.s.l.CustomerActivitiesImpl - Exception in thread sleep:  
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.sleepSeconds(CustomerActivitiesImpl.java:50)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.getCustomerAccount(CustomerActivitiesImpl.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.970 {c1 3c00b76c-6934-31f1-88b2-94cef273f8bb} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 1] ERROR i.t.s.l.CustomerActivitiesImpl - Exception in thread sleep:  
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.sleepSeconds(CustomerActivitiesImpl.java:50)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.getCustomerAccount(CustomerActivitiesImpl.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.970 {c5 4bc34fb6-0846-3a60-8a16-76bc42515d4e} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 2] ERROR i.t.s.l.CustomerActivitiesImpl - Exception in thread sleep:  
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.sleepSeconds(CustomerActivitiesImpl.java:50)
+	at io.temporal.samples.listworkflows.CustomerActivitiesImpl.getCustomerAccount(CustomerActivitiesImpl.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.971 {c2 43ae20d9-a43d-356c-8e5a-022f92b94b7a} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 4] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = 43ae20d9-a43d-356c-8e5a-022f92b94b7a, ActivityType = GetCustomerAccount, WorkflowId=c2, WorkflowType=CustomerWorkflow, RunId=dfb55ae0-d1d8-4c78-8cc9-19b59d022a83 
+java.util.concurrent.CancellationException: The gRPC request was cancelled
+	at io.temporal.internal.retryer.GrpcRetryerUtils.createFinalExceptionIfNotRetryable(GrpcRetryerUtils.java:59)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:77)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:336)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.971 {c3 fd45374d-cb98-3228-b912-c4602747f856} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 3] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = fd45374d-cb98-3228-b912-c4602747f856, ActivityType = GetCustomerAccount, WorkflowId=c3, WorkflowType=CustomerWorkflow, RunId=c8ad004a-73fa-4197-8a62-383ca2728366 
+java.util.concurrent.CancellationException: The gRPC request was cancelled
+	at io.temporal.internal.retryer.GrpcRetryerUtils.createFinalExceptionIfNotRetryable(GrpcRetryerUtils.java:59)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:77)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:336)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.972 {c4 a3347c0a-c2a2-3911-ab5e-ad4a2100b34c} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 5] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = a3347c0a-c2a2-3911-ab5e-ad4a2100b34c, ActivityType = GetCustomerAccount, WorkflowId=c4, WorkflowType=CustomerWorkflow, RunId=4b5a8752-c384-4df1-8d05-407970e54fdc 
+java.util.concurrent.CancellationException: The gRPC request was cancelled
+	at io.temporal.internal.retryer.GrpcRetryerUtils.createFinalExceptionIfNotRetryable(GrpcRetryerUtils.java:59)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:77)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:336)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.972 {c1 3c00b76c-6934-31f1-88b2-94cef273f8bb} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = 3c00b76c-6934-31f1-88b2-94cef273f8bb, ActivityType = GetCustomerAccount, WorkflowId=c1, WorkflowType=CustomerWorkflow, RunId=76a8dd76-ae5f-45cb-a5b5-638d2d925f05 
+java.util.concurrent.CancellationException: The gRPC request was cancelled
+	at io.temporal.internal.retryer.GrpcRetryerUtils.createFinalExceptionIfNotRetryable(GrpcRetryerUtils.java:59)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:77)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:336)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:57.972 {c5 4bc34fb6-0846-3a60-8a16-76bc42515d4e} [Activity Executor taskQueue=&quot;WorkflowTest-testActivityImpl-70b60c00-aba6-4f4e-8508-015b90998709&quot;, namespace=&quot;UnitTest&quot;: 2] WARN  i.t.internal.worker.ActivityWorker - Failure during reporting of activity result to the server. ActivityId = 4bc34fb6-0846-3a60-8a16-76bc42515d4e, ActivityType = GetCustomerAccount, WorkflowId=c5, WorkflowType=CustomerWorkflow, RunId=5738bf69-ee77-4ae3-8722-ff1bee2df25f 
+java.util.concurrent.CancellationException: The gRPC request was cancelled
+	at io.temporal.internal.retryer.GrpcRetryerUtils.createFinalExceptionIfNotRetryable(GrpcRetryerUtils.java:59)
+	at io.temporal.internal.retryer.GrpcSyncRetryer.retry(GrpcSyncRetryer.java:77)
+	at io.temporal.internal.retryer.GrpcRetryer.retryWithResult(GrpcRetryer.java:60)
+	at io.temporal.internal.retryer.GrpcRetryer.retry(GrpcRetryer.java:50)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.sendReply(ActivityWorker.java:336)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:289)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:58.221 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:58.221 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:58.221 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:58.222 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at 17 Nov 2023, 11:05:09</p>
+</div>
+</div>
+</body>
+</html>

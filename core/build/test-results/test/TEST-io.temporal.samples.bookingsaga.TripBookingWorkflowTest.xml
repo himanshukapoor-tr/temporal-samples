@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.bookingsaga.TripBookingWorkflowTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:16" hostname="himanshukapoor" time="0.04">
+  <properties/>
+  <testcase name="testSAGA" classname="io.temporal.samples.bookingsaga.TripBookingWorkflowTest" time="0.025"/>
+  <testcase name="testTripBookingFails" classname="io.temporal.samples.bookingsaga.TripBookingWorkflowTest" time="0.015"/>
+  <system-out><![CDATA[11:04:16.522 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=63, target=directaddress:///76de41a8-8553-4912-865b-9f7c1c0a8e89}} 
+11:04:16.522 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=63, target=directaddress:///76de41a8-8553-4912-865b-9f7c1c0a8e89}} 
+11:04:16.522 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=63, target=directaddress:///76de41a8-8553-4912-865b-9f7c1c0a8e89}} 
+11:04:16.526 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.527 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.535 {0dcb5f3b-6501-454b-83d0-46b795e23e3d d12f50a2-83af-3b53-9bea-ae1d91dd9eb7} [Activity Executor taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=d12f50a2-83af-3b53-9bea-ae1d91dd9eb7, activityType=BookFlight, attempt=1 
+java.lang.RuntimeException: Flight booking did not work
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:16.539 {0dcb5f3b-6501-454b-83d0-46b795e23e3d } [workflow-method-0dcb5f3b-6501-454b-83d0-46b795e23e3d-fc14e3f5-63ce-4e99-ab71-43cb09971f47] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='0dcb5f3b-6501-454b-83d0-46b795e23e3d', RunId=fc14e3f5-63ce-4e99-ab71-43cb09971f47, WorkflowType='TripBookingWorkflow' 
+io.temporal.failure.ActivityFailure: Activity with activityType='BookFlight' failed: 'Activity task failed'. scheduledEventId=17, startedEventId=18, activityId=d12f50a2-83af-3b53-9bea-ae1d91dd9eb7, identity='78715@himanshukapoor', retryState=RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ActivityStubBase.execute(ActivityStubBase.java:49)
+	at io.temporal.internal.sync.ActivityInvocationHandler.lambda$getActivityFunc$0(ActivityInvocationHandler.java:83)
+	at io.temporal.internal.sync.ActivityInvocationHandlerBase.invoke(ActivityInvocationHandlerBase.java:60)
+	at jdk.proxy3/jdk.proxy3.$Proxy79.bookFlight(Unknown Source)
+	at io.temporal.samples.bookingsaga.TripBookingWorkflowImpl.bookTrip(TripBookingWorkflowImpl.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.ApplicationFailure: message='Flight booking did not work', type='java.lang.RuntimeException', nonRetryable=false
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method:0)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:16.542 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.542 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.542 { } [Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.542 { } [Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.542 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:16.542 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:16.542 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.542 { } [Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.542 { } [Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.542 { } [Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.542 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.542 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.542 { } [Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.543 { } [Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.543 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.542 { } [Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.542 { } [Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.542 { } [Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.543 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testSAGA-fd6f837c-7b48-4722-b4e6-15d4032c0e48", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.543 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.543 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:16.543 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:16.543 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+11:04:16.545 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=68, target=directaddress:///1ca91761-eeda-403f-8549-c001923295bb}} 
+11:04:16.545 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=68, target=directaddress:///1ca91761-eeda-403f-8549-c001923295bb}} 
+11:04:16.545 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=68, target=directaddress:///1ca91761-eeda-403f-8549-c001923295bb}} 
+11:04:16.546 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.547 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+reserve car for 'trip1'
+booking hotel for 'trip1'
+failing to book flight for 'trip1'
+11:04:16.552 {98805f54-e069-4f78-a295-3d02977add43 c2286628-4980-374f-a03d-e724c47a78ea} [Activity Executor taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=c2286628-4980-374f-a03d-e724c47a78ea, activityType=BookFlight, attempt=1 
+java.lang.RuntimeException: Flight booking did not work
+	at io.temporal.samples.bookingsaga.TripBookingActivitiesImpl.bookFlight(TripBookingActivitiesImpl.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+cancelling hotel reservation '543f8ef7-9d10-4e57-9e79-73fce1cf8b5d' for 'trip1'
+cancelling car reservation 'e68a6e8b-e9e6-4076-97c9-968079220a35' for 'trip1'
+11:04:16.556 {98805f54-e069-4f78-a295-3d02977add43 } [workflow-method-98805f54-e069-4f78-a295-3d02977add43-4084800c-c43a-4479-b506-cef2f6cd636c] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='98805f54-e069-4f78-a295-3d02977add43', RunId=4084800c-c43a-4479-b506-cef2f6cd636c, WorkflowType='TripBookingWorkflow' 
+io.temporal.failure.ActivityFailure: Activity with activityType='BookFlight' failed: 'Activity task failed'. scheduledEventId=17, startedEventId=18, activityId=c2286628-4980-374f-a03d-e724c47a78ea, identity='78715@himanshukapoor', retryState=RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ActivityStubBase.execute(ActivityStubBase.java:49)
+	at io.temporal.internal.sync.ActivityInvocationHandler.lambda$getActivityFunc$0(ActivityInvocationHandler.java:83)
+	at io.temporal.internal.sync.ActivityInvocationHandlerBase.invoke(ActivityInvocationHandlerBase.java:60)
+	at jdk.proxy3/jdk.proxy3.$Proxy79.bookFlight(Unknown Source)
+	at io.temporal.samples.bookingsaga.TripBookingWorkflowImpl.bookTrip(TripBookingWorkflowImpl.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.ApplicationFailure: message='Flight booking did not work', type='java.lang.RuntimeException', nonRetryable=false
+	at io.temporal.samples.bookingsaga.TripBookingActivitiesImpl.bookFlight(TripBookingActivitiesImpl.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method:0)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:16.557 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.557 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.558 { } [Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.558 { } [Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.558 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:16.558 { } [Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.558 { } [Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.558 { } [Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:16.558 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.558 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:16.558 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.558 { } [Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.558 { } [Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.558 { } [Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.558 { } [Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.558 { } [Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:16.558 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.559 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.559 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testTripBookingFails-28178d2f-0b78-421a-b916-3984cdd14f0c", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:16.559 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:16.559 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:16.559 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:16.559 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

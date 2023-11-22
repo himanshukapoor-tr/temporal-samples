@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.temporal.samples.hello.HelloParallelActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-17T10:04:55" hostname="himanshukapoor" time="0.267">
+  <properties/>
+  <testcase name="testParallelActivity" classname="io.temporal.samples.hello.HelloParallelActivityTest" time="0.267"/>
+  <system-out><![CDATA[11:04:55.883 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=241, target=directaddress:///ccbd30e5-345d-42b9-8977-17c0922ab4ed}} 
+11:04:55.883 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=241, target=directaddress:///ccbd30e5-345d-42b9-8977-17c0922ab4ed}} 
+11:04:55.883 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=241, target=directaddress:///ccbd30e5-345d-42b9-8977-17c0922ab4ed}} 
+11:04:55.884 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:55.884 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:55.890 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:55.890 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:55.890 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.890 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:55.890 { } [Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.890 { } [Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.890 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.890 { } [Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.890 { } [Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.890 { } [Workflow Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.890 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest", identity=78715@himanshukapoor} 
+11:04:55.890 { } [Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:55.890 { } [Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:55.890 { } [Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:55.890 { } [Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:55.890 { } [Activity Poller taskQueue="WorkflowTest-testParallelActivity-198af427-26e0-4839-96e0-6e79c631dc51", namespace="UnitTest": 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:56.146 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:56.146 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:56.146 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:56.146 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

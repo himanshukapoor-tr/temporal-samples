@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - HelloExceptionTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>HelloExceptionTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.temporal.samples.hello.html">io.temporal.samples.hello</a> &gt; HelloExceptionTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.100s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testActivityScheduleToStartTimeout</td>
+<td class="success">5.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChildWorkflowTimeout</td>
+<td class="success">0.047s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testIOException</td>
+<td class="success">0.028s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:04:50.470 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=216, target=directaddress:///08a04688-9729-4312-88ae-d06ab45c2d51}} 
+11:04:50.470 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=216, target=directaddress:///08a04688-9729-4312-88ae-d06ab45c2d51}} 
+11:04:50.470 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=216, target=directaddress:///08a04688-9729-4312-88ae-d06ab45c2d51}} 
+11:04:50.477 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.478 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.485 {4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d bb1d5681-e11d-3463-81ae-ea903e79ed0f} [Activity Executor taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=bb1d5681-e11d-3463-81ae-ea903e79ed0f, activityType=ComposeGreeting, attempt=1 
+java.io.IOException: Hello World!
+	at io.temporal.samples.hello.HelloException$GreetingActivitiesImpl.composeGreeting(HelloException.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:50.486 {4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d bb1d5681-e11d-3463-81ae-ea903e79ed0f} [Activity Executor taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 1] WARN  i.t.i.a.ActivityTaskExecutors$ActivityTaskExecutor - Activity failure. ActivityId=bb1d5681-e11d-3463-81ae-ea903e79ed0f, activityType=ComposeGreeting, attempt=2 
+java.io.IOException: Hello World!
+	at io.temporal.samples.hello.HelloException$GreetingActivitiesImpl.composeGreeting(HelloException.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:50.487 {4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d } [workflow-method-4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d-84f73386-619e-4abf-8e9a-f00c6b5d85fa] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d', RunId=84f73386-619e-4abf-8e9a-f00c6b5d85fa, WorkflowType='GreetingChild' 
+io.temporal.failure.ActivityFailure: Activity with activityType='ComposeGreeting' failed: 'Activity task failed'. scheduledEventId=5, startedEventId=6, activityId=bb1d5681-e11d-3463-81ae-ea903e79ed0f, identity='78715@himanshukapoor', retryState=RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ActivityStubBase.execute(ActivityStubBase.java:49)
+	at io.temporal.internal.sync.ActivityInvocationHandler.lambda$getActivityFunc$0(ActivityInvocationHandler.java:83)
+	at io.temporal.internal.sync.ActivityInvocationHandlerBase.invoke(ActivityInvocationHandlerBase.java:60)
+	at jdk.proxy3/jdk.proxy3.$Proxy147.composeGreeting(Unknown Source)
+	at io.temporal.samples.hello.HelloException$GreetingChildImpl.composeGreeting(HelloException.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.ApplicationFailure: message='Hello World!', type='java.io.IOException', nonRetryable=false
+	at io.temporal.samples.hello.HelloException$GreetingActivitiesImpl.composeGreeting(HelloException.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method:0)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:50.490 {af479729-7063-41e9-9c92-b97547a4e3a6 } [workflow-method-af479729-7063-41e9-9c92-b97547a4e3a6-4a5b3fda-5f9c-4cb7-a7f1-1a553cc650ea] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='af479729-7063-41e9-9c92-b97547a4e3a6', RunId=4a5b3fda-5f9c-4cb7-a7f1-1a553cc650ea, WorkflowType='GreetingWorkflow' 
+io.temporal.failure.ChildWorkflowFailure: workflowId='4d9c8c15-ea28-3f49-b6d3-6e74f9a1c61d', runId='84f73386-619e-4abf-8e9a-f00c6b5d85fa', workflowType='GreetingChild', initiatedEventId=5, startedEventId=6, namespace='UnitTest', retryState=RETRY_STATE_UNSPECIFIED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ChildWorkflowStubImpl.execute(ChildWorkflowStubImpl.java:94)
+	at io.temporal.internal.sync.ChildWorkflowInvocationHandler.invoke(ChildWorkflowInvocationHandler.java:83)
+	at jdk.proxy3/jdk.proxy3.$Proxy146.composeGreeting(Unknown Source)
+	at io.temporal.samples.hello.HelloException$GreetingWorkflowImpl.getGreeting(HelloException.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.ActivityFailure: Activity with activityType='ComposeGreeting' failed: 'Activity task failed'. scheduledEventId=5, startedEventId=6, activityId=bb1d5681-e11d-3463-81ae-ea903e79ed0f, identity='78715@himanshukapoor', retryState=RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED
+	at io.temporal.failure.DefaultFailureConverter.failureToExceptionImpl(DefaultFailureConverter.java:166)
+	at io.temporal.failure.DefaultFailureConverter.failureToException(DefaultFailureConverter.java:86)
+	at io.temporal.common.converter.PayloadAndFailureDataConverter.failureToException(PayloadAndFailureDataConverter.java:143)
+	at io.temporal.internal.sync.SyncWorkflowContext.mapChildWorkflowException(SyncWorkflowContext.java:811)
+	at io.temporal.internal.sync.SyncWorkflowContext.lambda$executeChildWorkflow$2(SyncWorkflowContext.java:679)
+	... 8 common frames omitted
+Caused by: io.temporal.failure.ApplicationFailure: message='Hello World!', type='java.io.IOException', nonRetryable=false
+	at io.temporal.samples.hello.HelloException$GreetingActivitiesImpl.composeGreeting(HelloException.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method:0)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor$POJOActivityInboundCallsInterceptor.executeActivity(RootActivityInboundCallsInterceptor.java:64)
+	at io.temporal.internal.activity.RootActivityInboundCallsInterceptor.execute(RootActivityInboundCallsInterceptor.java:43)
+	at io.temporal.internal.activity.ActivityTaskExecutors$BaseActivityTaskExecutor.execute(ActivityTaskExecutors.java:107)
+	at io.temporal.internal.activity.ActivityTaskHandlerImpl.handle(ActivityTaskHandlerImpl.java:124)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handleActivity(ActivityWorker.java:278)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:243)
+	at io.temporal.internal.worker.ActivityWorker$TaskHandlerImpl.handle(ActivityWorker.java:216)
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$0(PollTaskExecutor.java:105)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:50.494 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:50.494 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.494 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:50.494 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:50.494 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:50.494 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:50.494 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:50.494 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.494 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:50.494 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:50.494 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:50.494 { } [Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:50.494 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.494 { } [Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:50.494 { } [Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:50.494 { } [Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:50.494 { } [Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: ActivityPollTask 
+11:04:50.495 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:50.495 { } [TemporalShutdownManager: 1] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Activity Poller taskQueue=&quot;WorkflowTest-testIOException-74a4b0db-0d7e-41c5-825f-2363f0dba16d&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:50.495 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:50.495 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:50.495 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:50.495 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+11:04:50.496 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=221, target=directaddress:///663a0f81-4bbd-4cfb-a7bc-5e702f447a7d}} 
+11:04:50.496 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=221, target=directaddress:///663a0f81-4bbd-4cfb-a7bc-5e702f447a7d}} 
+11:04:50.496 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=221, target=directaddress:///663a0f81-4bbd-4cfb-a7bc-5e702f447a7d}} 
+11:04:50.497 { } [Test worker] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.511 {f4d4e3f2-fdbc-3a82-8c44-36904102e933 } [workflow-method-f4d4e3f2-fdbc-3a82-8c44-36904102e933-869abab6-5900-4e75-b208-ca5e850f10d0] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='f4d4e3f2-fdbc-3a82-8c44-36904102e933', RunId=869abab6-5900-4e75-b208-ca5e850f10d0, WorkflowType='GreetingChild' 
+io.temporal.failure.ActivityFailure: Activity with activityType='ComposeGreeting' failed: 'Activity task timed out'. scheduledEventId=5, activityId=6674d7ef-b68d-3159-9b76-738b7f09d083, identity='', retryState=RETRY_STATE_TIMEOUT
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ActivityStubBase.execute(ActivityStubBase.java:49)
+	at io.temporal.internal.sync.ActivityInvocationHandler.lambda$getActivityFunc$0(ActivityInvocationHandler.java:83)
+	at io.temporal.internal.sync.ActivityInvocationHandlerBase.invoke(ActivityInvocationHandlerBase.java:60)
+	at jdk.proxy3/jdk.proxy3.$Proxy147.composeGreeting(Unknown Source)
+	at io.temporal.samples.hello.HelloException$GreetingChildImpl.composeGreeting(HelloException.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.TimeoutFailure: timeoutType=TIMEOUT_TYPE_SCHEDULE_TO_START
+11:04:55.514 {82358358-6760-443e-8cf4-32bd35dd5a4d } [workflow-method-82358358-6760-443e-8cf4-32bd35dd5a4d-ca362685-e5cd-4694-a6f4-37249fdf81d0] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='82358358-6760-443e-8cf4-32bd35dd5a4d', RunId=ca362685-e5cd-4694-a6f4-37249fdf81d0, WorkflowType='GreetingWorkflow' 
+io.temporal.failure.ChildWorkflowFailure: workflowId='f4d4e3f2-fdbc-3a82-8c44-36904102e933', runId='869abab6-5900-4e75-b208-ca5e850f10d0', workflowType='GreetingChild', initiatedEventId=5, startedEventId=6, namespace='UnitTest', retryState=RETRY_STATE_UNSPECIFIED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ChildWorkflowStubImpl.execute(ChildWorkflowStubImpl.java:94)
+	at io.temporal.internal.sync.ChildWorkflowInvocationHandler.invoke(ChildWorkflowInvocationHandler.java:83)
+	at jdk.proxy3/jdk.proxy3.$Proxy146.composeGreeting(Unknown Source)
+	at io.temporal.samples.hello.HelloException$GreetingWorkflowImpl.getGreeting(HelloException.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.ActivityFailure: Activity with activityType='ComposeGreeting' failed: 'Activity task timed out'. scheduledEventId=5, activityId=6674d7ef-b68d-3159-9b76-738b7f09d083, identity='', retryState=RETRY_STATE_TIMEOUT
+	at io.temporal.failure.DefaultFailureConverter.failureToExceptionImpl(DefaultFailureConverter.java:166)
+	at io.temporal.failure.DefaultFailureConverter.failureToException(DefaultFailureConverter.java:86)
+	at io.temporal.common.converter.PayloadAndFailureDataConverter.failureToException(PayloadAndFailureDataConverter.java:143)
+	at io.temporal.internal.sync.SyncWorkflowContext.mapChildWorkflowException(SyncWorkflowContext.java:811)
+	at io.temporal.internal.sync.SyncWorkflowContext.lambda$executeChildWorkflow$2(SyncWorkflowContext.java:679)
+	... 8 common frames omitted
+Caused by: io.temporal.failure.TimeoutFailure: timeoutType=TIMEOUT_TYPE_SCHEDULE_TO_START
+11:04:55.517 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.517 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.517 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.517 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.517 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.517 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:55.517 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:55.517 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.517 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.517 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.518 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testActivityScheduleToStartTimeout-f753400f-6392-4f25-abf6-62896204fdfe&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.518 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.518 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.518 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:55.518 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:55.518 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+11:04:55.524 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=226, target=directaddress:///ad6c3631-cec9-4d11-95aa-366ce04f65be}} 
+11:04:55.524 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - Created TestServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=226, target=directaddress:///ad6c3631-cec9-4d11-95aa-366ce04f65be}} 
+11:04:55.524 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - Created OperatorServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=226, target=directaddress:///ad6c3631-cec9-4d11-95aa-366ce04f65be}} 
+11:04:55.527 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - start: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.563 {fbc92a01-0277-3f10-87b3-57b31a1a4fef } [workflow-method-fbc92a01-0277-3f10-87b3-57b31a1a4fef-ae29de0e-fce7-42ae-9500-ad53e4a1686a] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='fbc92a01-0277-3f10-87b3-57b31a1a4fef', RunId=ae29de0e-fce7-42ae-9500-ad53e4a1686a, WorkflowType='GreetingChild' 
+io.temporal.failure.TimeoutFailure: message='simulated', timeoutType=TIMEOUT_TYPE_START_TO_CLOSE
+	at io.temporal.samples.hello.HelloException$GreetingChildImpl.composeGreeting(HelloException.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11:04:55.564 {fc20958b-6a88-4451-b510-425223f4a998 } [workflow-method-fc20958b-6a88-4451-b510-425223f4a998-f4dfb717-18d8-4128-8214-39cdd86f286f] WARN  i.t.i.sync.WorkflowExecutionHandler - Workflow execution failure WorkflowId='fc20958b-6a88-4451-b510-425223f4a998', RunId=f4dfb717-18d8-4128-8214-39cdd86f286f, WorkflowType='GreetingWorkflow' 
+io.temporal.failure.ChildWorkflowFailure: workflowId='fbc92a01-0277-3f10-87b3-57b31a1a4fef', runId='ae29de0e-fce7-42ae-9500-ad53e4a1686a', workflowType='GreetingChild', initiatedEventId=5, startedEventId=6, namespace='UnitTest', retryState=RETRY_STATE_UNSPECIFIED
+	at java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+	at io.temporal.internal.sync.ChildWorkflowStubImpl.execute(ChildWorkflowStubImpl.java:94)
+	at io.temporal.internal.sync.ChildWorkflowInvocationHandler.invoke(ChildWorkflowInvocationHandler.java:83)
+	at jdk.proxy3/jdk.proxy3.$Proxy146.composeGreeting(Unknown Source)
+	at io.temporal.samples.hello.HelloException$GreetingWorkflowImpl.getGreeting(HelloException.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:70)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:135)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:102)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: io.temporal.failure.TimeoutFailure: message='simulated', timeoutType=TIMEOUT_TYPE_START_TO_CLOSE
+	at io.temporal.samples.hello.HelloException$GreetingChildImpl.composeGreeting(HelloException.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method:0)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:339)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:314)
+11:04:55.565 { } [Time-limited test] INFO  io.temporal.worker.WorkerFactory - shutdown: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.565 { } [Time-limited test] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.565 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;: 1] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.565 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;: 3] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.565 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;: 4] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.565 { } [Test worker] INFO  i.t.s.TestServiceStubsImpl - shutdownNow 
+11:04:55.565 { } [Test worker] INFO  i.t.s.OperatorServiceStubsImpl - shutdownNow 
+11:04:55.565 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;: 2] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.565 { } [Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;: 5] INFO  io.temporal.internal.worker.Poller - poll loop is terminated: WorkflowPollTask 
+11:04:55.565 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - shutdownNow: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.566 { } [Test worker] INFO  io.temporal.internal.worker.Poller - shutdown: Poller{name=Workflow Poller taskQueue=&quot;WorkflowTest-testChildWorkflowTimeout-29a6f8f2-241a-4ca1-931a-86fd35a14de5&quot;, namespace=&quot;UnitTest&quot;, identity=78715@himanshukapoor} 
+11:04:55.566 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination begin: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.566 { } [Test worker] INFO  io.temporal.worker.WorkerFactory - awaitTermination done: WorkerFactory{identity=78715@himanshukapoor} 
+11:04:55.566 { } [Test worker] INFO  i.t.s.WorkflowServiceStubsImpl - shutdownNow 
+11:04:55.566 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down in-process gRPC server 
+11:04:55.566 { } [Test worker] INFO  io.temporal.testserver.TestServer - Shutting down gRPC Services 
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.1</a> at 17 Nov 2023, 11:05:09</p>
+</div>
+</div>
+</body>
+</html>
